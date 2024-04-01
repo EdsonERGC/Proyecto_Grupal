@@ -283,22 +283,203 @@ int main (){
                 break;     
             case 15:
                 cout << "Seleccionaste la Opción 15" << endl;
-                break;       
+            
+                break;
+				       
             case 16:
-                cout << "Seleccionaste la Opción 16" << endl;
+               	#include <iostream>
+				#include <cmath>
+				using namespace std;
+
+				int main() {
+    			int choice;
+    			double side1, side2;
+    			while (true) {
+        		cout << "\n1. Calcular la Hipotenusa\n2. Exit\n";
+        		cout << "Escoja una opcion: ";
+        		cin >> choice;
+        		if (choice == 1) {
+            	cout << "Ingrese la longitud del primer lado: ";
+            	cin >> side1;
+            	cout << "Ingrese la longitud del seguno lado: ";
+            	cin >> side2;
+            	if (side1 <= 0 || side2 <= 0) {
+                cout << "Ingreso invaldo. Por favor ingresa unicamente valores positivos \n";
+            	} else {
+                double hypotenuse = sqrt(pow(side1, 2) + pow(side2, 2));
+                cout << "La longitud de la Hipotenusa es: " << hypotenuse << "\n";
+            	}
+        	} else if (choice == 2) {
+            break;
+        } else {
+            cout << "Invalid choice. Please enter 1 or 2 only.\n";
+        }
+    }
+    return 0;
+}
                 break;
+                
             case 17:
-                cout << "Seleccionaste la Opción 17" << endl;
+                #include <iostream>
+
+				int main() {
+    			using namespace std;
+
+    			int numeros_terminos;
+
+    			cout << "Introduce el n�mero de t�rminos en la secuencia de Fibonacci: ";
+    			cin >> numeros_terminos;
+
+   				if (numeros_terminos <= 0) {
+        		cout << "La cantidad de t�rminos debe ser mayor a 0." << endl;
+    			} else {
+        		int termino1 = 0;
+        		int termino2 = 1;
+
+        		cout << "Secuencia de Fibonacci:" << endl;
+
+        		for (int i = 0; i < numeros_terminos; ++i) {
+            	cout << termino1 << " ";
+            	int siguiente_termino = termino1 + termino2;
+            	termino1 = termino2;
+            	termino2 = siguiente_termino;
+        		}
+
+        	cout << endl;
+    	}
+
+   	 return 0;
+	}
                 break;
+                
             case 18:
-                cout << "Seleccionaste la Opción 18" << endl;
+                #include <iostream>
+				#include <string>
+				#include <ctime>
+				#include <cstdlib>
+				using namespace std;
+
+				int main() {
+
+				char res;
+	
+				do{
+	
+				cout << "!Generardor Pass!\n"<<endl;
+	
+    			int length;
+    			cout << "Ingrese la longitud de la pass: ";
+    			cin >> length;
+    			if (length <= 0) {
+        		cout << "Invalid length. Exiting...\n";
+        		return 1;
+    			}
+    			string chars = 	"ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                  				"abcdefghijklmnopqrstuvwxyz"
+                  				"0123456789"
+                  				"!@#$%^&*()-_=+[]{}|;:,.<>?";
+    			srand(time(NULL));
+    			string password;
+    			for (int i = 0; i < length; i++) {
+        		int r = rand() % chars.length();
+        		password += chars[r];
+    		}
+    		cout << "Password Generada: \n" << password << "\n";
+    
+    
+    		cout << "\nDesea generar otra Pass? (S/N): "<<endl;
+    		cin >> res;
+    		}while(res== 'S' || res=='s');
+	
+			return 0;
+		};
                 break;
+                
             case 19:
-                cout << "Seleccionaste la Opción 19" << endl;
+                #include <iostream>
+				#include <ctime>
+				#include <cstdlib>
+
+				using namespace std;
+
+				enum Choice {
+    			ROCK, PAPER, SCISSORS,
+			};
+
+				const string choice_names[] = {"piedra", "papel", "tijeras"};
+	
+				Choice get_random_choice() {
+    		return static_cast<Choice>(rand() % 3);
+		}
+
+			int main() {
+    		srand(time(0));
+
+    		int user_choice;
+
+    		while (true) {
+        	cout << "\nElige entre piedra (0), papel (1), o tijeras (2): ";
+
+        	if (!(cin >> user_choice) || user_choice < 0 || user_choice > 2) {
+            	cout << "Opci�n inv�lida. Intente nuevamente..." << endl;
+            	cin.ignore();
+            continue;
+        	}
+        break;
+    	}
+
+    	Choice computer_choice = get_random_choice();
+    	string computer_choice_name = choice_names[computer_choice];
+
+    	string user_choice_name = choice_names[user_choice];
+
+    	if (user_choice == static_cast<int>(computer_choice)) {
+       	 	cout << "Empate. Usted ha elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
+    	} else if ((user_choice - computer_choice + 3) % 3 == 2) {
+       	 	cout << "�Ganaste! Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
+    	} else {
+        	cout << "Perdiste. Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
+    	}
+
+    	return 0;
+	};
                 break;
+                
             case 20:
-                cout << "Seleccionaste la Opción 20" << endl;
+                #include <bits/stdc++.h>
+				#include <vector>
+				#include <ctime>
+				#include <cstdlib>
+
+				using namespace std;
+
+				int main() {
+    				srand(time(0));
+
+    				int max = 100, min = 1, intentos = 0;
+
+    				int numero_secreto = rand() % (max - min + 1) + min;
+
+    			while (true) {
+        			int intento;
+
+        			cout << "Introduce un n�mero entre " << min << " y " << max << ":" << endl;
+        			cin >> intento;
+
+        		if (intento >= min && intento <= max) {
+            		break;
+        		}
+        			cout << "El n�mero ingresado est� fuera de los l�mites. Intenta nuevamente." << endl;
+
+        		intentos++;
+    		}
+
+    	cout << "N�mero encontrado en " << intentos << " intento(s)." << endl;
+
+    	return 0;
+	}
                 break;
+            
             case 21:
                 cout << "Saliendo del programa. ¡Hasta luego!" << endl;
                 break;
