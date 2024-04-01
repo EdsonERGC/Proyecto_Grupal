@@ -1,4 +1,10 @@
 #include <iostream>
+#include <thread>
+#include <chrono>
+#include <vector>
+#include <string>
+
+
 using namespace std;
 
 int main() {
@@ -259,10 +265,7 @@ int main (){
             case 11:
                 cout << "Seleccionaste la Opción 11" << endl;
 
-#include <iostream>
-#include <vector>
 
-using namespace std;
 
 vector<int> decimalABinario(int decimal) {
     vector<int> binario;
@@ -274,9 +277,9 @@ vector<int> decimalABinario(int decimal) {
     }
     
     return binario;
-}
 
-int main() {
+
+
     int numeroDecimal;
     
     cout << "Ingrese un número decimal: ";
@@ -289,9 +292,6 @@ int main() {
         cout << digito;
     }
     cout << endl;
-    
-    return 0;
-}
 
 
 
@@ -301,11 +301,6 @@ int main() {
             case 12:
                 cout << "Seleccionaste la Opción 12" << endl;
 
-
-#include <iostream>
-#include <vector>
-
-using namespace std;
 
 vector<char> Hexadecimal(int decimal) {
     vector<char> hexadecimal;
@@ -325,7 +320,7 @@ vector<char> Hexadecimal(int decimal) {
     return hexadecimal;
 }
 
-int main() {
+
     int numeroDecimal;
     cout << "Ingrese un número decimal: ";
     cin >> numeroDecimal;
@@ -337,9 +332,6 @@ int main() {
         cout << digito;
     }
     cout << endl;
-    
-    return 0;
-}
 
 
 
@@ -347,8 +339,6 @@ int main() {
             case 13:
                 cout << "Seleccionaste la Opción 13" << endl;
 
-#include <iostream>
-using namespace std;
 
 void dibujarCuadrado(int lado) {
     for (int i = 0; i < lado; ++i) {
@@ -381,7 +371,7 @@ void dibujarCirculo(int radio) {
     }
 }
 
-int main() {
+
     int opcion;
     cout << "Selecciona una figura:" << endl;
     cout << "1. Cuadrado" << endl;
@@ -403,8 +393,6 @@ int main() {
             cout << "Opción inválida." << endl;
     }
 
-    return 0;
-}
 
 
 
@@ -413,13 +401,8 @@ int main() {
             case 14:
                 cout << "Seleccionaste la Opción 14" << endl;
 
-#include <iostream>
-#include <thread>
-#include <chrono>
 
-using namespace std;
 
-int main() {
     int x = 0;
     int y = 0;
     int dx = 1;
@@ -443,19 +426,16 @@ int main() {
     }
 
     return 0;
-}
+
 
 
                 break;     
             case 15:
                 cout << "Seleccionaste la Opción 15" << endl;
             
-#include <iostream>
-#include <string>
 
-using namespace std;
 
-int main() {
+
     double saldo = 0.0;
     string usuario = "admin";
     string contrasena = "1234";
@@ -515,8 +495,6 @@ int main() {
         cout << "Credenciales incorrectas. Acceso denegado." << endl;
     }
 
-    return 0;
-}
 
 
 
