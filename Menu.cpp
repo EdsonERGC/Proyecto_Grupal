@@ -92,11 +92,11 @@ int main() {
 
                 break;
             case 3:
-                #include <iostream>
+                
 
-using namespace std;
+cout << "Seleccionaste la Opción 3" << endl;
 
-int main() {
+
     float km, millas, metros, pulgadas, libras, kilos;
 
     cout << "Ingrese la distancia en kilómetros: ";
@@ -120,15 +120,13 @@ int main() {
     libras = kilos * 2.20462;
     cout << kilos << " kilogramos equivalen a " << libras << " libras." << endl;
 
-    return 0;
+    
 }
 
-                cout << "Seleccionaste la Opción 3" << endl;
+               
                 break;
             case 4:
-                #include <iostream>
-#include <string>
-#include <algorithm>
+ cout << "Seleccionaste la Opción 4" << endl;
 
 // Función para verificar si una cadena es un palíndromo
 bool esPalindromo(const std::string& palabra) {
@@ -170,17 +168,17 @@ int main() {
         std::cout << numero << " no es un palindromo." << std::endl;
     }
 
-    return 0;
+    
 }
 
-                cout << "Seleccionaste la Opción 4" << endl;
+       
                 break;     
             case 5:
-                #include <stdio.h>
+	cout << "Seleccionaste la Opción 4" << endl;
+             
 
 
 
-int main (){
 	int numero, unidades, decenas, centenas, millar;
 	
 	printf("INGRESE EL NUMERO ARABIGO:");
@@ -250,9 +248,8 @@ int main (){
 	
 		
 	
-	return 0;
+	
 }
-                cout << "Seleccionaste la Opción 5" << endl;
                 break;       
             case 6:
                 cout << "Seleccionaste la Opción 6" << endl;
