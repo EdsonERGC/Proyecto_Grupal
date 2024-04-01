@@ -1,4 +1,11 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <bits/stdc++.h>
+#include <vector>
+
 using namespace std;
 
 int main() {
@@ -287,11 +294,6 @@ int main (){
                 break;
 				       
             case 16:
-               	#include <iostream>
-				#include <cmath>
-				using namespace std;
-
-				int main() {
     			int choice;
     			double side1, side2;
     			while (true) {
@@ -315,15 +317,10 @@ int main (){
             cout << "Invalid choice. Please enter 1 or 2 only.\n";
         }
     }
-    return 0;
 }
                 break;
                 
             case 17:
-                #include <iostream>
-
-				int main() {
-    			using namespace std;
 
     			int numeros_terminos;
 
@@ -348,19 +345,10 @@ int main (){
         	cout << endl;
     	}
 
-   	 return 0;
 	}
                 break;
                 
             case 18:
-                #include <iostream>
-				#include <string>
-				#include <ctime>
-				#include <cstdlib>
-				using namespace std;
-
-				int main() {
-
 				char res;
 	
 				do{
@@ -390,18 +378,10 @@ int main (){
     		cout << "\nDesea generar otra Pass? (S/N): "<<endl;
     		cin >> res;
     		}while(res== 'S' || res=='s');
-	
-			return 0;
 		};
                 break;
                 
             case 19:
-                #include <iostream>
-				#include <ctime>
-				#include <cstdlib>
-
-				using namespace std;
-
 				enum Choice {
     			ROCK, PAPER, SCISSORS,
 			};
@@ -446,14 +426,6 @@ int main (){
                 break;
                 
             case 20:
-                #include <bits/stdc++.h>
-				#include <vector>
-				#include <ctime>
-				#include <cstdlib>
-
-				using namespace std;
-
-				int main() {
     				srand(time(0));
 
     				int max = 100, min = 1, intentos = 0;
@@ -487,6 +459,4 @@ int main (){
                 cout << "Elección inválida. Por favor, selecciona una opción válida." << endl;
         }
     } while (elecion != 21);
-
-    return 0;
 }
