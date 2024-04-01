@@ -271,19 +271,270 @@ int main (){
                 break;     
             case 11:
                 cout << "Seleccionaste la Opción 11" << endl;
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> decimalABinario(int decimal) {
+    vector<int> binario;
+    
+    while (decimal > 0) {
+        int residuo = decimal % 2;
+        binario.insert(binario.begin(), residuo); 
+        decimal /= 2;
+    }
+    
+    return binario;
+}
+
+int main() {
+    int numeroDecimal;
+    
+    cout << "Ingrese un número decimal: ";
+    cin >> numeroDecimal;
+    
+    vector<int> numeroBinario = decimalABinario(numeroDecimal);
+    
+    cout << "El número binario equivalente es: ";
+    for (int digito : numeroBinario) {
+        cout << digito;
+    }
+    cout << endl;
+    
+    return 0;
+}
+
+
+
+
+
                 break;       
             case 12:
                 cout << "Seleccionaste la Opción 12" << endl;
+
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<char> Hexadecimal(int decimal) {
+    vector<char> hexadecimal;
+    
+    while (decimal > 0) {
+        int residuo = decimal % 16;
+        char digitoHexadecimal;
+        if (residuo < 10) {
+            digitoHexadecimal = residuo + '0';
+        } else {
+            digitoHexadecimal = residuo - 10 + 'A';
+        }
+        hexadecimal.insert(hexadecimal.begin(), digitoHexadecimal);
+        decimal /= 16;
+    }
+    
+    return hexadecimal;
+}
+
+int main() {
+    int numeroDecimal;
+    cout << "Ingrese un número decimal: ";
+    cin >> numeroDecimal;
+    
+    vector<char> numeroHexadecimal = Hexadecimal(numeroDecimal);
+    
+    cout << "El número hexadecimal equivalente es: ";
+    for (char digito : numeroHexadecimal) {
+        cout << digito;
+    }
+    cout << endl;
+    
+    return 0;
+}
+
+
+
                 break;
             case 13:
                 cout << "Seleccionaste la Opción 13" << endl;
+
+#include <iostream>
+using namespace std;
+
+void dibujarCuadrado(int lado) {
+    for (int i = 0; i < lado; ++i) {
+        for (int j = 0; j < lado; ++j) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+void dibujarTriangulo(int altura) {
+    for (int i = 1; i <= altura; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
+
+void dibujarCirculo(int radio) {
+    for (int i = -radio; i <= radio; ++i) {
+        for (int j = -radio; j <= radio; ++j) {
+            if (i * i + j * j <= radio * radio) {
+                cout << "* ";
+            } else {
+                cout << "  ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int opcion;
+    cout << "Selecciona una figura:" << endl;
+    cout << "1. Cuadrado" << endl;
+    cout << "2. Triángulo" << endl;
+    cout << "3. Círculo" << endl;
+    cin >> opcion;
+
+    switch (opcion) {
+        case 1:
+            dibujarCuadrado(5);  
+            break;
+        case 2:
+            dibujarTriangulo(5);  
+            break;
+        case 3:
+            dibujarCirculo(5); 
+            break;
+        default:
+            cout << "Opción inválida." << endl;
+    }
+
+    return 0;
+}
+
+
+
+
                 break;
             case 14:
                 cout << "Seleccionaste la Opción 14" << endl;
+
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+using namespace std;
+
+int main() {
+    int x = 0;
+    int y = 0;
+    int dx = 1;
+    int dy = 1;
+
+    while (true) {
+        cout << "\033[2J";
+        x = (x + dx) % 80;
+        y = (y + dy) % 25;
+
+        if (x == 0 || x == 79) {
+            dx *= -1;
+        }
+        if (y == 0 || y == 24) {
+            dy *= -1;
+        }
+
+        cout << "\033[" << y + 1 << ";" << x + 1 << "H*";
+        cout.flush();
+        this_thread::sleep_for(chrono::milliseconds(100));
+    }
+
+    return 0;
+}
+
+
                 break;     
             case 15:
                 cout << "Seleccionaste la Opción 15" << endl;
             
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    double saldo = 0.0;
+    string usuario = "admin";
+    string contrasena = "1234";
+
+    cout << "Bienvenido al cajero automático                      (usuario admin  Contraseña 1234)" << endl;
+    cout << "Usuario: ";
+    string input_usuario;
+    cin >> input_usuario;
+
+    cout << "Contraseña: ";
+    string input_contrasena;
+    cin >> input_contrasena;
+
+    if (input_usuario == usuario && input_contrasena == contrasena) {
+        cout << "Inicio de sesión exitoso" << endl;
+
+        int opcion;
+        do {
+            cout << "\nMenú:" << endl;
+            cout << "1. Consultar saldo" << endl;
+            cout << "2. Ingresar dinero" << endl;
+            cout << "3. Sacar dinero" << endl;
+            cout << "4. Salir" << endl;
+            cout << "Selecciona una opción: ";
+            cin >> opcion;
+
+            switch (opcion) {
+                case 1:
+                    cout << "Saldo actual: $" << saldo << endl;
+                    break;
+                case 2:
+                    double deposito;
+                    cout << "Ingrese la cantidad a depositar: $";
+                    cin >> deposito;
+                    saldo += deposito;
+                    cout << "Depósito exitoso. Saldo actual: $" << saldo << endl;
+                    break;
+                case 3:
+                    double retiro;
+                    cout << "Ingrese la cantidad a retirar: $";
+                    cin >> retiro;
+                    if (retiro <= saldo) {
+                        saldo -= retiro;
+                        cout << "Retiro exitoso. Saldo actual: $" << saldo << endl;
+                    } else {
+                        cout << "Saldo insuficiente." << endl;
+                    }
+                    break;
+                case 4:
+                    cout << "Gracias por usar el cajero automático. ¡Hasta luego!" << endl;
+                    break;
+                default:
+                    cout << "Opción inválida. Intente nuevamente." << endl;
+            }
+        } while (opcion != 4);
+    } else {
+        cout << "Credenciales incorrectas. Acceso denegado." << endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
                 break;
 				       
             case 16:
@@ -327,11 +578,11 @@ int main (){
 
     			int numeros_terminos;
 
-    			cout << "Introduce el n�mero de t�rminos en la secuencia de Fibonacci: ";
+    			cout << "Introduce el n mero de t rminos en la secuencia de Fibonacci: ";
     			cin >> numeros_terminos;
 
    				if (numeros_terminos <= 0) {
-        		cout << "La cantidad de t�rminos debe ser mayor a 0." << endl;
+        		cout << "La cantidad de t rminos debe ser mayor a 0." << endl;
     			} else {
         		int termino1 = 0;
         		int termino2 = 1;
@@ -421,7 +672,7 @@ int main (){
         	cout << "\nElige entre piedra (0), papel (1), o tijeras (2): ";
 
         	if (!(cin >> user_choice) || user_choice < 0 || user_choice > 2) {
-            	cout << "Opci�n inv�lida. Intente nuevamente..." << endl;
+            	cout << "Opci n inv lida. Intente nuevamente..." << endl;
             	cin.ignore();
             continue;
         	}
@@ -436,7 +687,7 @@ int main (){
     	if (user_choice == static_cast<int>(computer_choice)) {
        	 	cout << "Empate. Usted ha elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
     	} else if ((user_choice - computer_choice + 3) % 3 == 2) {
-       	 	cout << "�Ganaste! Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
+       	 	cout << " Ganaste! Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
     	} else {
         	cout << "Perdiste. Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
     	}
@@ -463,18 +714,18 @@ int main (){
     			while (true) {
         			int intento;
 
-        			cout << "Introduce un n�mero entre " << min << " y " << max << ":" << endl;
+        			cout << "Introduce un n mero entre " << min << " y " << max << ":" << endl;
         			cin >> intento;
 
         		if (intento >= min && intento <= max) {
             		break;
         		}
-        			cout << "El n�mero ingresado est� fuera de los l�mites. Intenta nuevamente." << endl;
+        			cout << "El n mero ingresado est  fuera de los l mites. Intenta nuevamente." << endl;
 
         		intentos++;
     		}
 
-    	cout << "N�mero encontrado en " << intentos << " intento(s)." << endl;
+    	cout << "N mero encontrado en " << intentos << " intento(s)." << endl;
 
     	return 0;
 	}
