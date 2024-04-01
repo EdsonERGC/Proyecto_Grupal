@@ -1,4 +1,17 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <bits/stdc++.h>
+#include <vector>
+#include <thread>
+#include <chrono>
+#include <vector>
+#include <string>
+
+
+
 using namespace std;
 
 int main() {
@@ -32,40 +45,31 @@ int main() {
 
         switch (elecion) {
             case 1:
-                #include<iostream>
+		 cout << "Seleccionaste la Opción 1" << endl;
 
-using namespace std;
-
-int main(){
-	int num1 = 0, num2= 0, suma =0, resta=0, mult=0, div=0;
+              int num1, num2, suma, resta, mult, div;
 	
-	cout<<"ingrese numero:";
-	cin>>num1;
-	cout<<"ingrese numero.";
-	cin>>num2;
+		cout<<"ingrese numero:";
+		cin>>num1;
+		cout<<"ingrese numero.";
+		cin>>num2;
 	
-	suma= num1+num2;
-	resta=num1- num2;
-	mult=num1*num2;
-	div= num1/num2;
+		suma= num1+num2;
+		resta=num1- num2;
+		mult=num1*num2;
+		div= num1/num2;
 	
-	cout<<"la suma es:"<<suma<<endl;
-	cout<<"La resta es:"<<resta<<endl;
-	cout<<"La mult es:"<<mult<<endl;
-	cout<<"La div es:"<<div<<endl;
+		cout<<"la suma es:"<<suma<<endl;
+		cout<<"La resta es:"<<resta<<endl;
+		cout<<"La mult es:"<<mult<<endl;
+		cout<<"La div es:"<<div<<endl;
 	
 		
-	return 0;
-}
-                cout << "Seleccionaste la Opción 1" << endl;
+
                 break;
             case 2:
-                #include <iostream>
+ cout << "Seleccionaste la Opción 2" << endl;
 
-using namespace std;
- 
- 
- int main(){
  	int numero;
  	
  	cout<<"Digite un numero:";
@@ -86,10 +90,6 @@ using namespace std;
  	
  	
 
- 	return 0;
-	
- }
-                cout << "Seleccionaste la Opción 2" << endl;
                 break;
             case 3:
                 #include <iostream>
@@ -272,10 +272,7 @@ int main (){
             case 11:
                 cout << "Seleccionaste la Opción 11" << endl;
 
-#include <iostream>
-#include <vector>
 
-using namespace std;
 
 vector<int> decimalABinario(int decimal) {
     vector<int> binario;
@@ -287,9 +284,9 @@ vector<int> decimalABinario(int decimal) {
     }
     
     return binario;
-}
 
-int main() {
+
+
     int numeroDecimal;
     
     cout << "Ingrese un número decimal: ";
@@ -302,9 +299,6 @@ int main() {
         cout << digito;
     }
     cout << endl;
-    
-    return 0;
-}
 
 
 
@@ -314,11 +308,6 @@ int main() {
             case 12:
                 cout << "Seleccionaste la Opción 12" << endl;
 
-
-#include <iostream>
-#include <vector>
-
-using namespace std;
 
 vector<char> Hexadecimal(int decimal) {
     vector<char> hexadecimal;
@@ -338,7 +327,7 @@ vector<char> Hexadecimal(int decimal) {
     return hexadecimal;
 }
 
-int main() {
+
     int numeroDecimal;
     cout << "Ingrese un número decimal: ";
     cin >> numeroDecimal;
@@ -350,9 +339,6 @@ int main() {
         cout << digito;
     }
     cout << endl;
-    
-    return 0;
-}
 
 
 
@@ -360,8 +346,6 @@ int main() {
             case 13:
                 cout << "Seleccionaste la Opción 13" << endl;
 
-#include <iostream>
-using namespace std;
 
 void dibujarCuadrado(int lado) {
     for (int i = 0; i < lado; ++i) {
@@ -394,7 +378,7 @@ void dibujarCirculo(int radio) {
     }
 }
 
-int main() {
+
     int opcion;
     cout << "Selecciona una figura:" << endl;
     cout << "1. Cuadrado" << endl;
@@ -416,8 +400,6 @@ int main() {
             cout << "Opción inválida." << endl;
     }
 
-    return 0;
-}
 
 
 
@@ -426,13 +408,8 @@ int main() {
             case 14:
                 cout << "Seleccionaste la Opción 14" << endl;
 
-#include <iostream>
-#include <thread>
-#include <chrono>
 
-using namespace std;
 
-int main() {
     int x = 0;
     int y = 0;
     int dx = 1;
@@ -456,19 +433,16 @@ int main() {
     }
 
     return 0;
-}
+
 
 
                 break;     
             case 15:
                 cout << "Seleccionaste la Opción 15" << endl;
             
-#include <iostream>
-#include <string>
 
-using namespace std;
 
-int main() {
+
     double saldo = 0.0;
     string usuario = "admin";
     string contrasena = "1234";
@@ -528,8 +502,6 @@ int main() {
         cout << "Credenciales incorrectas. Acceso denegado." << endl;
     }
 
-    return 0;
-}
 
 
 
@@ -538,11 +510,6 @@ int main() {
                 break;
 				       
             case 16:
-               	#include <iostream>
-				#include <cmath>
-				using namespace std;
-
-				int main() {
     			int choice;
     			double side1, side2;
     			while (true) {
@@ -566,15 +533,10 @@ int main() {
             cout << "Invalid choice. Please enter 1 or 2 only.\n";
         }
     }
-    return 0;
 }
                 break;
                 
             case 17:
-                #include <iostream>
-
-				int main() {
-    			using namespace std;
 
     			int numeros_terminos;
 
@@ -599,19 +561,10 @@ int main() {
         	cout << endl;
     	}
 
-   	 return 0;
 	}
                 break;
                 
             case 18:
-                #include <iostream>
-				#include <string>
-				#include <ctime>
-				#include <cstdlib>
-				using namespace std;
-
-				int main() {
-
 				char res;
 	
 				do{
@@ -641,18 +594,10 @@ int main() {
     		cout << "\nDesea generar otra Pass? (S/N): "<<endl;
     		cin >> res;
     		}while(res== 'S' || res=='s');
-	
-			return 0;
 		};
                 break;
                 
             case 19:
-                #include <iostream>
-				#include <ctime>
-				#include <cstdlib>
-
-				using namespace std;
-
 				enum Choice {
     			ROCK, PAPER, SCISSORS,
 			};
@@ -697,14 +642,6 @@ int main() {
                 break;
                 
             case 20:
-                #include <bits/stdc++.h>
-				#include <vector>
-				#include <ctime>
-				#include <cstdlib>
-
-				using namespace std;
-
-				int main() {
     				srand(time(0));
 
     				int max = 100, min = 1, intentos = 0;
@@ -738,6 +675,4 @@ int main() {
                 cout << "Elección inválida. Por favor, selecciona una opción válida." << endl;
         }
     } while (elecion != 21);
-
-    return 0;
 }
