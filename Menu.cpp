@@ -283,6 +283,7 @@ int main (){
                 break;     
             case 15:
                 cout << "Seleccionaste la OpciÃ³n 15" << endl;
+            
                 break;
 				       
             case 16:
@@ -326,11 +327,11 @@ int main (){
 
     			int numeros_terminos;
 
-    			cout << "Introduce el número de términos en la secuencia de Fibonacci: ";
+    			cout << "Introduce el nï¿½mero de tï¿½rminos en la secuencia de Fibonacci: ";
     			cin >> numeros_terminos;
 
    				if (numeros_terminos <= 0) {
-        		cout << "La cantidad de términos debe ser mayor a 0." << endl;
+        		cout << "La cantidad de tï¿½rminos debe ser mayor a 0." << endl;
     			} else {
         		int termino1 = 0;
         		int termino2 = 1;
@@ -420,7 +421,7 @@ int main (){
         	cout << "\nElige entre piedra (0), papel (1), o tijeras (2): ";
 
         	if (!(cin >> user_choice) || user_choice < 0 || user_choice > 2) {
-            	cout << "Opción inválida. Intente nuevamente..." << endl;
+            	cout << "Opciï¿½n invï¿½lida. Intente nuevamente..." << endl;
             	cin.ignore();
             continue;
         	}
@@ -435,7 +436,7 @@ int main (){
     	if (user_choice == static_cast<int>(computer_choice)) {
        	 	cout << "Empate. Usted ha elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
     	} else if ((user_choice - computer_choice + 3) % 3 == 2) {
-       	 	cout << "¡Ganaste! Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
+       	 	cout << "ï¿½Ganaste! Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
     	} else {
         	cout << "Perdiste. Has elegido " << user_choice_name << " y la computadora ha elegido " << computer_choice_name << "." << endl;
     	}
@@ -462,23 +463,23 @@ int main (){
     			while (true) {
         			int intento;
 
-        			cout << "Introduce un número entre " << min << " y " << max << ":" << endl;
+        			cout << "Introduce un nï¿½mero entre " << min << " y " << max << ":" << endl;
         			cin >> intento;
 
         		if (intento >= min && intento <= max) {
             		break;
         		}
-        			cout << "El número ingresado está fuera de los límites. Intenta nuevamente." << endl;
+        			cout << "El nï¿½mero ingresado estï¿½ fuera de los lï¿½mites. Intenta nuevamente." << endl;
 
         		intentos++;
     		}
 
-    	cout << "Número encontrado en " << intentos << " intento(s)." << endl;
+    	cout << "Nï¿½mero encontrado en " << intentos << " intento(s)." << endl;
 
     	return 0;
 	}
                 break;
-                
+            
             case 21:
                 cout << "Saliendo del programa. Â¡Hasta luego!" << endl;
                 break;
