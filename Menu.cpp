@@ -1,8 +1,15 @@
 #include <iostream>
+#include <cmath>
+#include <string>
+#include <ctime>
+#include <cstdlib>
+#include <bits/stdc++.h>
+#include <vector>
 #include <thread>
 #include <chrono>
 #include <vector>
 #include <string>
+
 
 
 using namespace std;
@@ -503,11 +510,6 @@ void dibujarCirculo(int radio) {
                 break;
 				       
             case 16:
-               	#include <iostream>
-				#include <cmath>
-				using namespace std;
-
-				int main() {
     			int choice;
     			double side1, side2;
     			while (true) {
@@ -531,15 +533,10 @@ void dibujarCirculo(int radio) {
             cout << "Invalid choice. Please enter 1 or 2 only.\n";
         }
     }
-    return 0;
 }
                 break;
                 
             case 17:
-                #include <iostream>
-
-				int main() {
-    			using namespace std;
 
     			int numeros_terminos;
 
@@ -564,19 +561,10 @@ void dibujarCirculo(int radio) {
         	cout << endl;
     	}
 
-   	 return 0;
 	}
                 break;
                 
             case 18:
-                #include <iostream>
-				#include <string>
-				#include <ctime>
-				#include <cstdlib>
-				using namespace std;
-
-				int main() {
-
 				char res;
 	
 				do{
@@ -606,18 +594,10 @@ void dibujarCirculo(int radio) {
     		cout << "\nDesea generar otra Pass? (S/N): "<<endl;
     		cin >> res;
     		}while(res== 'S' || res=='s');
-	
-			return 0;
 		};
                 break;
                 
             case 19:
-                #include <iostream>
-				#include <ctime>
-				#include <cstdlib>
-
-				using namespace std;
-
 				enum Choice {
     			ROCK, PAPER, SCISSORS,
 			};
@@ -662,14 +642,6 @@ void dibujarCirculo(int radio) {
                 break;
                 
             case 20:
-                #include <bits/stdc++.h>
-				#include <vector>
-				#include <ctime>
-				#include <cstdlib>
-
-				using namespace std;
-
-				int main() {
     				srand(time(0));
 
     				int max = 100, min = 1, intentos = 0;
@@ -703,6 +675,4 @@ void dibujarCirculo(int radio) {
                 cout << "Elección inválida. Por favor, selecciona una opción válida." << endl;
         }
     } while (elecion != 21);
-
-    return 0;
 }
