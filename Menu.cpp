@@ -174,7 +174,7 @@ int main() {
        
                 break;     
             case 5:
-	cout << "Seleccionaste la Opción 4" << endl;
+	cout << "Seleccionaste la Opción 5" << endl;
              
 
 
